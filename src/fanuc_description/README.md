@@ -8,7 +8,7 @@ ___
 
 As we can see in the screen below, the DH parameters were first calculated and then the robot description file was created.
 
-<img src="/doc/fanuc_20iA_DH.png" alt="drawing" width="600"/>
+<img src="https://github.com/Bettorio/ros-robotics-fanuc-m20iA/tree/main/src/fanuc_description/doc/fanuc_20iA_DH.png" alt="drawing" width="600"/>
 
 ____
 # Preview of the robot using rviz
@@ -23,7 +23,7 @@ roslaunch urdf_tutorial display.launch model:=robot/fanuc.urdf
 
 Here what you should see:
 
-<img src="/doc/rviz_preview.png" alt="drawing" width="600"/>
+<img src="https://github.com/Bettorio/ros-robotics-fanuc-m20iA/tree/main/src/fanuc_description/doc/rviz_preview.png" alt="drawing" width="600"/>
 
 ___
 ##### Vittorio Fina
