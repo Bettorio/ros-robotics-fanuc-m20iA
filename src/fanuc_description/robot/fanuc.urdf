@@ -13,12 +13,12 @@
 
     <joint name="virtual_joint" type="fixed">
         <parent link="world"/>
-        <child link="base_link"/>
+        <child link="link_0"/>
     </joint>
 
     <!--************************************************LINK 0********************************************-->
 
-    <link name="base_link">
+    <link name="link_0">
         <visual>
             <origin xyz="0 0 0" rpy="0.0 0 0"/>
             <geometry>
@@ -55,7 +55,7 @@
     <joint name="joint_1" type="revolute">
         <!--Joint properties-->
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <parent link="base_link" />
+        <parent link="link_0" />
         <child link="link_1" />
         <axis xyz="0 0 1" />
         <limit lower="-2.967" upper="2.967" effort="12" velocity="2.443" />
@@ -148,14 +148,14 @@
     <!--************************************************LINK 5********************************************-->
     <link name="link_5">
         <visual>
-            <origin xyz="-1.465 -0.985 0.0" rpy="1.5708 0 1.5708"/>
+            <origin xyz="-1.465 -1.01 0.0" rpy="1.5708 0 1.5708"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/visual/link_5.dae"/>
             </geometry> 
         </visual>
 
         <collision>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="-1.465 -1.01 0.0" rpy="1.5708 0 1.5708"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/collision/link_5.stl"/>
             </geometry>
@@ -164,7 +164,7 @@
 
     <joint name="joint_5" type="revolute">
         <!--Joint properties-->
-        <origin xyz="0 0 0.835" rpy="1.5708 0 0" />
+        <origin xyz="0 0 0.860" rpy="1.5708 0 0" />
         <parent link="link_4" />
         <child link="link_5" />
         <axis xyz="0 0 1" />
