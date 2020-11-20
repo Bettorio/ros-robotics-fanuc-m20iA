@@ -13,12 +13,12 @@
 
     <joint name="virtual_joint" type="fixed">
         <parent link="world"/>
-        <child link="link_0"/>
+        <child link="base_link"/>
     </joint>
 
     <!--************************************************LINK 0********************************************-->
 
-    <link name="link_0">
+    <link name="base_link">
         <visual>
             <origin xyz="0 0 0" rpy="0.0 0 0"/>
             <geometry>
@@ -55,7 +55,7 @@
     <joint name="joint_1" type="revolute">
         <!--Joint properties-->
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <parent link="link_0" />
+        <parent link="base_link" />
         <child link="link_1" />
         <axis xyz="0 0 1" />
         <limit lower="-2.967" upper="2.967" effort="12" velocity="2.443" />
