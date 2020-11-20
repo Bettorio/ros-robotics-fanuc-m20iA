@@ -8,7 +8,7 @@ ___
 
 As we can see in the screen below, the DH parameters were first calculated and then the robot description file was created.
 
-<img src="https://raw.githubusercontent.com/Bettorio/ros-robotics-fanuc-m20iA/main/src/fanuc_description/doc/fanuc_20iA_DH.png" alt="drawing" width="600"/>
+<img src="https://raw.githubusercontent.com/Bettorio/ros-robotics-fanuc-m20iA/main/src/fanuc_description/doc/fanuc-m20iA_DH.png" alt="drawing" width="600"/>
 
 ____
 # Preview of the robot using rviz
