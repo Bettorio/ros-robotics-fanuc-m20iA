@@ -20,7 +20,7 @@ A rviz screen will then open that will allow us to have a preview of the robot a
 
 Make sure that, referring to the ```demo.launch``` file we set the variable to use gui to ```True``` so we are able to move robot joints. In particular the line 22 of this file should be:
 ```xml
-  <arg name="use_gui" default="true" />
+22  <arg name="use_gui" default="true" />
 ```
 ___
 ##### Vittorio Fina
