@@ -17,5 +17,10 @@ roslaunch fanuc_moveit_config demo.launch
 ```
 
 A rviz screen will then open that will allow us to have a preview of the robot and with the freedom of being able to add models in the instrument panel for any further information.
+
+Make sure that, referring to the ```demo.launch``` file we set the variable to use gui to ```True``` so we are able to move robot joints. In particular the line 22 of this file should be:
+```xml
+  <arg name="use_gui" default="true" />
+```
 ___
 ##### Vittorio Fina

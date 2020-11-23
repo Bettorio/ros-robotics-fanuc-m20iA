@@ -1,3 +1,18 @@
+/* 
+ * -------------------------------------------------------------------
+ * This module has been developed as an exercise for Robotics course
+ * @ UniSa.
+ *
+ * Title:   main.cpp
+ * Author:  Vittorio Fina
+ * Date:    Nov 23, 2020
+ *
+ * This module implements a listener that heards messages from the topic 
+ * "/tf" in order to parse and show them to stdout.
+ *
+ * -------------------------------------------------------------------
+ */
+
 #include <ros/ros.h>
 #include <tf2_ros/transform_listener.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
@@ -10,14 +25,21 @@ int main (int argc, char **argv) {
     ros::init(argc, argv, "tf_listener");
     ros::NodeHandle n;
 
+    /*
+     * Initialize a tf_listener that stores informations into the tf_buffer
+     */
     tf2_ros::Buffer tf_buffer;
     tf2_ros::TransformListener tf_listener(tf_buffer);
 
-    ros::Rate rate(1.0);
+    ros::Rate rate(1.0);    // Repeat the operation every second
 
     while(ros::ok()) {
 
-        // Store transforms received
+        /*
+         * Declare a vector of TransforStamped msgs and store in sequence
+         * the informations abount joints. For all the links we refer to the
+         * end-effector.
+         */
         std::vector<geometry_msgs::TransformStamped> transforms(6);
 
         try {
@@ -32,6 +54,11 @@ int main (int argc, char **argv) {
             ros::Duration(1.0).sleep();
         }
 
+        /*
+         * Prepare the string that has to be transmitted. Accessing the translation
+         * and the rotation field of the transforms it is possible to retrieve the 
+         * related Quaternion and obtain the rotation matrix and the Euler Angles.
+         */
         for (int i = 0; i < transforms.size(); i++) {
             std::ostringstream str;
 
