@@ -35,11 +35,12 @@ A_6_5 = [cos(teta6) -sin(teta6) 0 0; sin(teta6) cos(teta6) 0 0; 0 0 1 0.1; 0 0 0
 disp('Generated Homogenous Matrix!')
 
 % Define Transformations to the end-effector
+A_6_0 = A_1_0 * A_2_1 * A_3_2 * A_4_3 * A_5_4 * A_6_5;
+A_6_1 = A_2_1 * A_3_2 * A_4_3 * A_5_4 * A_6_5;
+A_6_2 = A_3_2 * A_4_3 * A_5_4 * A_6_5;
+A_6_3 = A_4_3 * A_5_4 * A_6_5;
 A_6_4 = A_5_4 * A_6_5;
-A_6_3 = A_6_4 * A_4_3;
-A_6_2 = A_6_3 * A_3_2;
-A_6_1 = A_6_2 * A_2_1;
-A_6_0 = A_6_1 * A_1_0;
+% A_6_5 = A_6_5; Already Assigned
 disp('Generated Transformations to the end-effector!')
 
 % Define Rotation Matrix
