@@ -21,43 +21,43 @@ using namespace std;
 
 int main (int argc, char **argv) {
 
+    /*
+     * Initialize the node and declare the NodeHandle object.
+     */
     ROS_INFO("Intializing node /tf_listener");
     ros::init(argc, argv, "tf_listener");
     ros::NodeHandle n;
 
     /*
-     * Initialize a tf_listener that stores informations into the tf_buffer
+     * Declare a TransformListener with the related buffer to store the information in.
      */
     tf2_ros::Buffer tf_buffer;
     tf2_ros::TransformListener tf_listener(tf_buffer);
 
-    ros::Rate rate(1.0);    // Repeat the operation every second
+    ros::Rate rate(1.0); // Repeat every second.
 
     while(ros::ok()) {
 
         /*
-         * Declare a vector of TransforStamped msgs and store in sequence
-         * the informations abount joints. For all the links we refer to the
-         * end-effector.
+         * Declare and use a std::vector of TransformStamped in order to save
+         * the transformations from each link to the flange. 
          */
         std::vector<geometry_msgs::TransformStamped> transforms(6);
 
         try {
-            transforms[0] = tf_buffer.lookupTransform("base_link", "link_6", ros::Time(0));
-            transforms[1] = tf_buffer.lookupTransform("link_1", "link_6", ros::Time(0));
-            transforms[2] = tf_buffer.lookupTransform("link_2", "link_6", ros::Time(0));
-            transforms[3] = tf_buffer.lookupTransform("link_3", "link_6", ros::Time(0));
-            transforms[4] = tf_buffer.lookupTransform("link_4", "link_6", ros::Time(0));
-            transforms[5] = tf_buffer.lookupTransform("link_5", "link_6", ros::Time(0));
+            transforms[0] = tf_buffer.lookupTransform("base_link", "flange", ros::Time(0));
+            transforms[1] = tf_buffer.lookupTransform("link_1", "flange", ros::Time(0));
+            transforms[2] = tf_buffer.lookupTransform("link_2", "flange", ros::Time(0));
+            transforms[3] = tf_buffer.lookupTransform("link_3", "flange", ros::Time(0));
+            transforms[4] = tf_buffer.lookupTransform("link_4", "flange", ros::Time(0));
+            transforms[5] = tf_buffer.lookupTransform("link_5", "flange", ros::Time(0));
         } catch (tf2::TransformException ex) {
             ROS_WARN("%s", ex.what());
             ros::Duration(1.0).sleep();
         }
 
         /*
-         * Prepare the string that has to be transmitted. Accessing the translation
-         * and the rotation field of the transforms it is possible to retrieve the 
-         * related Quaternion and obtain the rotation matrix and the Euler Angles.
+         * Construct the message to be shown to stdout. 
          */
         for (int i = 0; i < transforms.size(); i++) {
             std::ostringstream str;
@@ -66,6 +66,10 @@ int main (int argc, char **argv) {
             str << std::endl << "------- Translation -------" << std::endl;
             str << transforms[i].transform.translation << std::endl;
 
+            /*
+             * From the transform it's possible to save the quaternion 
+             * and retrieve the rotation axis, the angle and the rotation matrix. 
+             */
             tf2::Quaternion quaternion;
             tf2::fromMsg(transforms[i].transform.rotation, quaternion);
             tf2::Vector3 rotation_axis = quaternion.getAxis();
