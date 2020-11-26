@@ -11,15 +11,17 @@ ___
 
 The node has been designed to show all the transformations connected to the robot joints, from the first to the last. What we can observe from the reported output example is that for each transformation there is a series of representations which are the ```Translation```, the ```Axis/Angle```, the ```Rotation Matrix``` and the ```Euler Angles``` expressed in roll, pitch, yaw.
 
-```bash
-[ INFO] [1605893996.188829564]: 
+Here follows an example of output:
 
-******** Tranformation from link_5 to link_6 *********
+```bash
+[ INFO] [1606415853.206486474]: 
+
+******** Tranformation from link_3 to flange *********
 
 ------- Translation -------
-x: 0
-y: 0
-z: 0
+x: 0.15
+y: 0.96
+z: -3.52628e-06
 
 
 ------- Axis/Angle -------
@@ -33,6 +35,7 @@ Angle = [ 1.5708 ]
 
 ------- Euler Angles -------
 RPY = [ -1.5708 0 0 ]
+
 ```
 
 ___
