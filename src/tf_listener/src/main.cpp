@@ -62,7 +62,7 @@ int main (int argc, char **argv) {
         for (int i = 0; i < transforms.size(); i++) {
             std::ostringstream str;
 
-            str << std::endl << std::endl << "******** Tranformation from " << transforms[i].header.frame_id << " to " << transforms[i].child_frame_id << " *********" << std::endl;
+            str << std::endl << std::endl << "******** Transformation from " << transforms[i].header.frame_id << " to " << transforms[i].child_frame_id << " *********" << std::endl;
             str << std::endl << "------- Translation -------" << std::endl;
             str << transforms[i].transform.translation << std::endl;
 

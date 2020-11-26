@@ -16,7 +16,7 @@ Here follows an example of output:
 ```bash
 [ INFO] [1606415853.206486474]: 
 
-******** Tranformation from link_3 to flange *********
+******** Transformation from link_3 to flange *********
 
 ------- Translation -------
 x: 0.15
