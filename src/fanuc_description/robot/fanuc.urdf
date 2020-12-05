@@ -20,7 +20,7 @@
 
     <link name="base_link">
         <visual>
-            <origin xyz="0 0 0" rpy="0.0 0 0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/visual/link_0.dae"/>
             </geometry> 
@@ -66,14 +66,14 @@
 
     <link name="link_2">
         <visual>
-            <origin xyz="-0.15 0.525 0" rpy="1.5708 0.0 0.0"/>
+            <origin xyz="-0.15 0.525 0.0" rpy="1.5708 0.0 0.0"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/visual/link_2.dae"/>
             </geometry> 
         </visual>
 
         <collision>
-            <origin xyz="-0.15 0.525 0" rpy="1.5708 0.0 0.0"/>
+            <origin xyz="-0.15 0.525 0.0" rpy="1.5708 0.0 0.0"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/collision/link_2.stl"/>
             </geometry>
@@ -93,14 +93,14 @@
     <!--************************************************LINK 3********************************************-->
     <link name="link_3">
         <visual>
-            <origin xyz="-1.315 -0.15 0" rpy="1.5708 0 1.5708"/>
+            <origin xyz="-1.315 -0.15 0.0" rpy="1.5708 0.0 1.5708"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/visual/link_3.dae"/>
             </geometry> 
         </visual>
 
         <collision>
-            <origin xyz="-1.315 -0.15 0" rpy="1.5708 0 1.5708"/>
+            <origin xyz="-1.315 -0.15 0.0" rpy="1.5708 0.0 1.5708"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/collision/link_3.stl"/>
             </geometry>
@@ -121,14 +121,14 @@
     <!--************************************************LINK 4********************************************-->
     <link name="link_4">
         <visual>
-             <origin xyz="1.465 0 -0.15" rpy="0 -1.5708 0"/>
+             <origin xyz="1.465 0.0 -0.15" rpy="0.0 -1.5708 0.0"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/visual/link_4.dae"/>
             </geometry> 
         </visual>
 
         <collision>
-             <origin xyz="1.465 0 -0.15" rpy="0 -1.5708 0"/>
+             <origin xyz="1.465 0.0 -0.15" rpy="0.0 -1.5708 0.0"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/collision/link_4.stl"/>
             </geometry>
@@ -148,14 +148,14 @@
     <!--************************************************LINK 5********************************************-->
     <link name="link_5">
         <visual>
-            <origin xyz="-1.465 -1.01 0.0" rpy="1.5708 0 1.5708"/>
+            <origin xyz="-1.465 -1.01 0.0" rpy="1.5708 0.0 1.5708"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/visual/link_5.dae"/>
             </geometry> 
         </visual>
 
         <collision>
-            <origin xyz="-1.465 -1.01 0.0" rpy="1.5708 0 1.5708"/>
+            <origin xyz="-1.465 -1.01 0.0" rpy="1.5708 0.0 1.5708"/>
             <geometry>
                 <mesh filename="package://fanuc_description/meshes/collision/link_5.stl"/>
             </geometry>
