@@ -1,7 +1,6 @@
 # tf-listener package
 
 ![ROSVersion](https://img.shields.io/badge/ROS-melodic-blue)
-![c++](https://img.shields.io/badge/written%20in-c%2B%2B-green)
 ![build](https://img.shields.io/badge/build-passed-success)
 
 This package implements a node, written in ```C++```, for the correct reading of the parameters that are published on the topic ```/tf```.
