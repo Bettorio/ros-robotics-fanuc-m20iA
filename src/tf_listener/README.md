@@ -22,7 +22,6 @@ x: 0.15
 y: 0.96
 z: -3.52628e-06
 
-
 ------- Axis/Angle -------
 Axis = [ -1 0 0 ]
 Angle = [ 1.5708 ]
@@ -36,6 +35,8 @@ Angle = [ 1.5708 ]
 RPY = [ -1.5708 0 0 ]
 
 ```
+
+*N.B. Note that values ​​such as -3.67321e-06 should be understood as zeros, because they are expressed incorrectly by the calculator*
 
 ___
 ##### Vittorio Fina
