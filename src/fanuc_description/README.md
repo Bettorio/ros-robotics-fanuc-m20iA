@@ -2,7 +2,7 @@
 ![ROSVersion](https://img.shields.io/badge/ROS-melodic-blue)
 ![build](https://img.shields.io/badge/build-passed-success)
 
-This package deals with the description of the Fanuc-m20iA robot according to the ```Fanuc_RM-20iA``` datasheet. To do this, a URDF file has been created which describes the fundamental characteristics of the robot joints, following the operations for calculating the Denavit-Hartenberg parameters, as reported in the ```doc/fanuc_20iA_DH.png``` file.
+This package deals with the description of the Fanuc-m20iA robot according to the [```Fanuc_Robot_M-20iA``` datasheet](https://www.fanuc.co.jp/en/product/catalog/pdf/robot/RM-10iA(E)-07.pdf). To do this, a URDF file has been created which describes the fundamental characteristics of the robot joints, following the operations for calculating the Denavit-Hartenberg parameters, as reported in the ```doc/fanuc_20iA_DH.png``` file.
 ___
 # Denavit-Hartenberg parameters for the Fanuc-m20iA
 
